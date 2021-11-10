@@ -270,10 +270,8 @@ module.exports = {
 		transform: ['responsive', 'hover', 'group-hover', 'motion-reduce'],
 		translate: ['responsive', 'hover', 'group-hover', 'motion-reduce'],
 		visibility: ['responsive', 'group-hover', 'group-focus'],
-		scrollSnapType: ['responsive'],
 	},
 	plugins: [
-		require('tailwindcss-scroll-snap'),
 		require('@tailwindcss/aspect-ratio'),
 		plugin(function ({ addUtilities, theme }) {
 
