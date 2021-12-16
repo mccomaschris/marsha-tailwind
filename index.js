@@ -134,27 +134,7 @@ module.exports = {
 			}
 		}
 	},
-	variants: {
-		alignItems: ['responsive', 'hover', 'focus', 'group-hover'],
-		backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
-		backgroundImage: ['responsive', 'hover'],
-		backgroundSize: ['responsive', 'hover', 'focus', 'group-hover'],
-		borderColor: ['responsive', 'hover', 'group-hover', 'focus'],
-		boxShadow: ['hover'],
-		display: ['responsive', 'group-hover', 'group-focus'],
-		flexbox: ['responsive', 'group-hover'],
-		justifyContent: ['responsive', 'hover', 'focus', 'group-hover'],
-		margin: ['responsive', 'hover', 'group-hover'],
-		opacity: ['responsive', 'hover', 'group-hover', 'group-focus'],
-		ringColor: ['hover', 'active', 'focus'],
-		textColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
-		textDecoration: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
-		transform: ['responsive', 'hover', 'group-hover', 'motion-reduce'],
-		translate: ['responsive', 'hover', 'group-hover', 'motion-reduce'],
-		visibility: ['responsive', 'group-hover', 'group-focus'],
-	},
 	plugins: [
-		require('@tailwindcss/aspect-ratio'),
 		plugin(function ({ addUtilities, theme }) {
 
 			function hexToRGB(h) {
@@ -194,7 +174,7 @@ module.exports = {
 					[`.bg-${name}-overlay-70`] : { backgroundColor: `rgba(${hexToRGB(color)},0.7)`},
 					[`.bg-${name}-overlay-80`] : { backgroundColor: `rgba(${hexToRGB(color)},0.8)`},
 					[`.bg-${name}-overlay-90`] : { backgroundColor: `rgba(${hexToRGB(color)},0.9)`},
-					[`.underline-${name}`] : { textDecorationColor: color },
+					// [`.underline-${name}`] : { textDecorationColor: color },
 				}),
 			]
 
@@ -204,13 +184,13 @@ module.exports = {
 
 			addUtilities(utilities, ['responsive', 'hover', 'group-hover'])
 
-			const underlineUtilities = {
-				'.underline-2': { textDecorationThickness: '2px' },
-				'.underline-4': { textDecorationThickness: '4px' },
-				'.underline-8': { textDecorationThickness: '8px' },
-      }
+			// const underlineUtilities = {
+			// 	'.underline-2': { textDecorationThickness: '2px' },
+			// 	'.underline-4': { textDecorationThickness: '4px' },
+			// 	'.underline-8': { textDecorationThickness: '8px' },
+      // }
 
-			addUtilities(underlineUtilities, ['responsive', 'hover', 'group-hover'])
+			// addUtilities(underlineUtilities, ['responsive', 'hover', 'group-hover'])
 		})
 	]
 }
