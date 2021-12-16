@@ -16,7 +16,7 @@
     "url": "https://github.com/marshallu/marsha-tailwind/issues"
   },
   "homepage": "https://github.com/marshallu/marsha-tailwind#readme",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^10.4.0",
     "lodash": "^4.17.21",
     "postcss-import": "^14.0.0",
