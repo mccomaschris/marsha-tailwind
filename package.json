@@ -1,6 +1,6 @@
 {
   "name": "@marshallu/marsha-tailwind",
-  "version": "1.0.4",
+  "version": "3.0.0-beta.0",
   "description": "Tailwind config for Marsha WordPress theme",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/marshallu/marsha-tailwind#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.0",
-	"lodash": "^4.17.21",
+    "lodash": "^4.17.21",
     "postcss-import": "^12.0.1",
     "postcss-nesting": "^7.0.1",
     "postcss": "^8.4.5",
