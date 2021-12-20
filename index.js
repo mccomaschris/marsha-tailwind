@@ -135,6 +135,8 @@ module.exports = {
 		}
 	},
 	plugins: [
+		require('@tailwindcss/aspect-ratio'),
+
 		plugin(function ({ addUtilities, theme }) {
 
 			function hexToRGB(h) {
