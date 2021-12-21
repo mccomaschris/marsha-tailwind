@@ -135,64 +135,6 @@ module.exports = {
 		}
 	},
 	plugins: [
-		require('@tailwindcss/aspect-ratio'),
-
-		plugin(function ({ addUtilities, theme }) {
-
-			function hexToRGB(h) {
-				let r = 0, g = 0, b = 0;
-
-				if (h.length == 4) {
-					r = "0x" + h[1] + h[1];
-					g = "0x" + h[2] + h[2];
-					b = "0x" + h[3] + h[3];
-
-				} else if (h.length == 7) {
-					r = "0x" + h[1] + h[2];
-					g = "0x" + h[3] + h[4];
-					b = "0x" + h[5] + h[6];
-				}
-
-				return +r + "," + +g + "," + +b
-			}
-
-			const defaultColors = {
-				'black': theme('colors.gray.900'),
-				'green': theme('colors.green'),
-				'green-bright': theme('colors.green-bright'),
-				'brown': theme('colors.brown'),
-				'brown-dark': theme('colors.brown-dark'),
-				'white': theme('colors.white'),
-			}
-
-			const generators = [
-				(color, name) => ({
-					[`.bg-${name}-overlay-10`] : { backgroundColor: `rgba(${hexToRGB(color)},0.1)`},
-					[`.bg-${name}-overlay-20`] : { backgroundColor: `rgba(${hexToRGB(color)},0.2)`},
-					[`.bg-${name}-overlay-30`] : { backgroundColor: `rgba(${hexToRGB(color)},0.3)`},
-					[`.bg-${name}-overlay-40`] : { backgroundColor: `rgba(${hexToRGB(color)},0.4)`},
-					[`.bg-${name}-overlay-50`] : { backgroundColor: `rgba(${hexToRGB(color)},0.5)`},
-					[`.bg-${name}-overlay-60`] : { backgroundColor: `rgba(${hexToRGB(color)},0.6)`},
-					[`.bg-${name}-overlay-70`] : { backgroundColor: `rgba(${hexToRGB(color)},0.7)`},
-					[`.bg-${name}-overlay-80`] : { backgroundColor: `rgba(${hexToRGB(color)},0.8)`},
-					[`.bg-${name}-overlay-90`] : { backgroundColor: `rgba(${hexToRGB(color)},0.9)`},
-					// [`.underline-${name}`] : { textDecorationColor: color },
-				}),
-			]
-
-			const utilities = _.flatMap(generators, generator => {
-				return _.flatMap(defaultColors, generator)
-			})
-
-			addUtilities(utilities, ['responsive', 'hover', 'group-hover'])
-
-			// const underlineUtilities = {
-			// 	'.underline-2': { textDecorationThickness: '2px' },
-			// 	'.underline-4': { textDecorationThickness: '4px' },
-			// 	'.underline-8': { textDecorationThickness: '8px' },
-      // }
-
-			// addUtilities(underlineUtilities, ['responsive', 'hover', 'group-hover'])
-		})
+		require('@tailwindcss/aspect-ratio')
 	]
 }
