@@ -66,6 +66,12 @@ module.exports = {
 			safe: '1.16625rem',
 			massive: "10rem" // 160px for BE PROUD
 		},
+		screens: {
+			sm: '640px',
+			md: '768px',
+			lg: "1024px",
+			xl: "1440px"
+		},
 		extend: {
 			backgroundSize: {
 				'125%': '125%',
