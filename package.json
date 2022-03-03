@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/marshallu/marsha-tailwind#readme",
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.0",
     "autoprefixer": "^10.4.0",
     "lodash": "^4.17.21",
     "postcss": "^8.4.5",
