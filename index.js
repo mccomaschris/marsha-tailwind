@@ -186,6 +186,9 @@ module.exports = {
 								width: theme('spacing.8'),
 								opacity: '100%',
 								transform: 'translateX(0)',
+								transitionProperty: 'all',
+								transitionDuration: '15ms',
+								transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
 							}
 						}
 					},
