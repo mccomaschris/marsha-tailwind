@@ -178,7 +178,7 @@ module.exports = {
 							opacity: 0,
 							transform: 'translateX(-0.5rem)',
 							transitionProperty: 'all',
-							transitionDuration: '15ms',
+							transitionDuration: '75ms',
 							transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
 						},
 						'&:hover': {
@@ -188,7 +188,7 @@ module.exports = {
 								transform: 'translateX(0)',
 								transitionProperty: 'all',
 								transitionDuration: '150ms',
-								transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+								transitionTimingFunction: 'cubic-bezier(0.4, 0, 1, 1)',
 							}
 						}
 					},
