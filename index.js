@@ -146,7 +146,6 @@ module.exports = {
 		function ({ addComponents, theme }) {
       addComponents({
         '.btn': {
-					// inline-flex items-center justify-center bg-green stroke-white text-white text-xl font-bold uppercase rounded py-2 px-4 text-center transition-all duration-150 ease-in-out no-underline
 					fontFamily: theme('fontFamily.sans'),
 					fontSize: theme('fontSize.xl'),
 					fontWeight: 'bold',
@@ -170,8 +169,28 @@ module.exports = {
 						backgroundPosition: 'right',
 						backgroundSize: '1.5rem 1.5rem',
 						content: '""',
-					}
+					},
+					'@media (min-width: 1024px)': {
+						padding: `${theme('spacing.3')} ${theme('spacing.6')}`,
+						'&::after': {
+							marginLeft: 0,
+							width: 0,
+							opacity: 0,
+							transform: 'translateX(-0.5rem)',
+							transitionProperty: 'all',
+							transitionDuration: '150ms',
+							transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+						},
+						'&:hover': {
+							'&::after': {
+								width: theme('spacing.8'),
+								opacity: '100%',
+								transform: 'translateX(0)',
+							}
+						}
+					},
         },
+
 				'.btn-green': {
 					backgroundColor: theme('colors.green'),
 					color: theme('colors.white'),
