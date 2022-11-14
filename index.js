@@ -163,8 +163,8 @@ module.exports = {
 					transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
 					'&::after': {
 						display: 'inline-block',
-						height: theme('spacing.8'),
-						width: theme('spacing.8'),
+						height: theme('spacing.6'),
+						width: theme('spacing.6'),
 						backgroundRepeat: 'no-repeat',
 						backgroundPosition: 'right',
 						backgroundSize: '1.5rem 1.5rem',
@@ -175,6 +175,7 @@ module.exports = {
 						'&::after': {
 							marginLeft: 0,
 							width: 0,
+							height: theme('spacing.8'),
 							opacity: 0,
 							transform: 'translateX(-0.5rem)',
 							transitionProperty: 'all',
