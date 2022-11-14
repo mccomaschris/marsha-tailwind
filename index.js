@@ -28,7 +28,6 @@ module.exports = {
 				800: "#212424",
 				900: "#131716"
 			},
-
 			red: {
 				50: "#fef2f2",
 				100: "#fee2e2",
@@ -41,13 +40,36 @@ module.exports = {
 				800: "#991b1b",
 				900: "#7f1d1d"
 			},
+			yellow: {
+				50: '#fefce8',
+				100: '#fef9c3',
+				200: '#fef08a',
+				300: '#fde047',
+				400: '#facc15',
+				500: '#eab308',
+				600: '#ca8a04',
+				700: '#a16207',
+				800: '#854d0e',
+				900: '#713f12',
+			},
+			orange: {
+				50: '#fff7ed',
+				100: '#ffedd5',
+				200: '#fed7aa',
+				300: '#fdba74',
+				400: '#fb923c',
+				500: '#f97316',
+				600: '#ea580c',
+				700: '#c2410c',
+				800: '#9a3412',
+				900: '#7c2d12',
+			},
 		},
 		container: {
 			center: true
 		},
 		fontFamily: {
 			sans: ["Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
-			serif: ["Sentinel A", "Sentinel B", "Bookman Old Style Regular", "serif"],
 			holiday: ['Snowburst One', "cursive"]
 		},
 		fontSize: {
@@ -117,5 +139,110 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [],
+	plugins: [
+    plugin(function({ addVariant }) {
+			addVariant('prefers-contrast', '@media (prefers-contrast: more)')
+    }),
+		function ({ addComponents, theme }) {
+      addComponents({
+        '.btn': {
+					// inline-flex items-center justify-center bg-green stroke-white text-white text-xl font-bold uppercase rounded py-2 px-4 text-center transition-all duration-150 ease-in-out no-underline
+					fontFamily: theme('fontFamily.sans'),
+					fontSize: theme('fontSize.xl'),
+					fontWeight: 'bold',
+					padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
+					textTransform: 'uppercase',
+					letterSpacing: theme('letterSpacing.wide'),
+					display: 'inline-flex',
+					alignItems: 'center',
+					justifyContent: 'center',
+					textDecoration: 'none !important',
+					textAlign: 'center',
+					borderRadius: theme('borderRadius.DEFAULT'),
+					transitionProperty: 'all',
+					transitionDuration: '150ms',
+					transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+					'&::after': {
+						display: 'inline-block',
+						height: theme('spacing.8'),
+						width: theme('spacing.8'),
+						backgroundRepeat: 'no-repeat',
+						backgroundPosition: 'right',
+						backgroundSize: '1.5rem 1.5rem',
+						content: '""',
+					}
+        },
+				'.btn-green': {
+					backgroundColor: theme('colors.green'),
+					color: theme('colors.white'),
+					textDecoration: 'none !important',
+					'@media (prefers-contrast: more)': {
+						color: theme('colors.green-darkest'),
+					},
+					'&:hover': {
+						backgroundColor: theme('colors.green-dark'),
+						color: theme('colors.white'),
+					},
+					'&::after': {
+						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
+					}
+				},
+
+				'.btn-white': {
+					backgroundColor: theme('colors.white'),
+					color: theme('colors.green'),
+					textDecoration: 'none !important',
+					'@media (prefers-contrast: more)': {
+						color: theme('colors.green-darkest'),
+					},
+					'&:hover': {
+						backgroundColor: theme('colors.gray.50'),
+						color: theme('colors.green'),
+					},
+					'&::after': {
+						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%2300AC3E'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
+					}
+				},
+
+				'.btn-clear': {
+					backgroundColor: 'transparent',
+					color: theme('colors.white'),
+					textDecoration: 'none !important',
+					'&:hover': {
+						backgroundColor: 'rgba(0,172,62,.8)',
+						color: theme('colors.white'),
+					},
+					'&::after': {
+						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
+					}
+				},
+
+				'.btn-brown': {
+					backgroundColor: theme('colors.white'),
+					color: theme('colors.brown'),
+					textDecoration: 'none !important',
+					'&:hover': {
+						backgroundColor: theme('colors.white'),
+						color: theme('colors.brown-dark'),
+					},
+					'&::after': {
+						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23402d20'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
+					}
+				},
+
+				'.btn-black': {
+					backgroundColor: theme('colors.white'),
+					color: theme('colors.gray.500'),
+					'&:hover': {
+						backgroundColor: theme('colors.gray.50'),
+						color: theme('colors.gray.900'),
+						textDecoration: 'underline',
+					},
+					'&::after': {
+						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23000000'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
+					}
+				}
+      })
+    }
+  ]
 }
