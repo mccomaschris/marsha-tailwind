@@ -173,9 +173,9 @@ module.exports = {
 					},
 					'@media (min-width: 1024px)': {
 						padding: `${theme('spacing.3')} ${theme('spacing.6')}`,
+						fontSize: theme('fontSize.xl'),
 						'&::after': {
 							marginLeft: 0,
-							fontSize: theme('fontSize.xl'),
 							width: 0,
 							height: theme('spacing.8'),
 							opacity: 0,
