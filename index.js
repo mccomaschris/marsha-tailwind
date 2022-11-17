@@ -147,7 +147,7 @@ module.exports = {
       addComponents({
         '.btn': {
 					fontFamily: theme('fontFamily.sans'),
-					fontSize: theme('fontSize.xl'),
+					fontSize: theme('fontSize.lg'),
 					fontWeight: 'bold',
 					padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
 					textTransform: 'uppercase',
@@ -168,12 +168,14 @@ module.exports = {
 						backgroundRepeat: 'no-repeat',
 						backgroundPosition: 'right',
 						backgroundSize: '1.5rem 1.5rem',
+						marginLeft: '0.5rem',
 						content: '""',
 					},
 					'@media (min-width: 1024px)': {
 						padding: `${theme('spacing.3')} ${theme('spacing.6')}`,
 						'&::after': {
 							marginLeft: 0,
+							fontSize: theme('fontSize.lg'),
 							width: 0,
 							height: theme('spacing.8'),
 							opacity: 0,
@@ -263,6 +265,32 @@ module.exports = {
 					},
 					'&::after': {
 						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23000000'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
+					}
+				},
+
+				'.right-arrow': {
+					display: 'inline-flex',
+					alignItems: 'center',
+					'&::after': {
+						display: 'inline-block',
+						width: theme('spacing.8'),
+						height: theme('spacing.8'),
+						backgroundRepeat: 'no-repeat',
+						content: '""',
+						backgroundSize: '1.5rem 1.5rem',
+						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%2300AC3E'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
+					},
+					'@media (min-width: 1024px)': {
+						'&::after': {
+							opacity: '0',
+							width: '0',
+						},
+						'&:hover': {
+							'&::after': {
+								opacity: '100%',
+								width: theme('spacing.8'),
+							}
+						}
 					}
 				}
       })
