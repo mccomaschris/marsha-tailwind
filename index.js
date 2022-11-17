@@ -175,7 +175,7 @@ module.exports = {
 						padding: `${theme('spacing.3')} ${theme('spacing.6')}`,
 						'&::after': {
 							marginLeft: 0,
-							fontSize: theme('fontSize.lg'),
+							fontSize: theme('fontSize.xl'),
 							width: 0,
 							height: theme('spacing.8'),
 							opacity: 0,
