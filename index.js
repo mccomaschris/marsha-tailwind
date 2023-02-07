@@ -208,6 +208,10 @@ module.exports = {
 						backgroundColor: theme('colors.green-dark'),
 						color: theme('colors.white'),
 					},
+					'&:focus': {
+						backgroundColor: theme('colors.green-dark'),
+						color: theme('colors.white'),
+					},
 					'&::after': {
 						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
 					}
@@ -224,6 +228,10 @@ module.exports = {
 						backgroundColor: theme('colors.gray.50'),
 						color: theme('colors.green'),
 					},
+					'&:focus': {
+						backgroundColor: theme('colors.gray.50'),
+						color: theme('colors.green'),
+					},
 					'&::after': {
 						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%2300AC3E'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
 					}
@@ -234,6 +242,10 @@ module.exports = {
 					color: theme('colors.white'),
 					textDecoration: 'none !important',
 					'&:hover': {
+						backgroundColor: 'rgba(0,172,62,.8)',
+						color: theme('colors.white'),
+					},
+					'&:focus': {
 						backgroundColor: 'rgba(0,172,62,.8)',
 						color: theme('colors.white'),
 					},
@@ -250,6 +262,10 @@ module.exports = {
 						backgroundColor: theme('colors.white'),
 						color: theme('colors.brown-dark'),
 					},
+					'&:focus': {
+						backgroundColor: theme('colors.white'),
+						color: theme('colors.brown-dark'),
+					},
 					'&::after': {
 						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23402d20'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
 					}
@@ -259,6 +275,11 @@ module.exports = {
 					backgroundColor: theme('colors.white'),
 					color: theme('colors.gray.500'),
 					'&:hover': {
+						backgroundColor: theme('colors.gray.50'),
+						color: theme('colors.gray.900'),
+						textDecoration: 'underline',
+					},
+					'&:focus': {
 						backgroundColor: theme('colors.gray.50'),
 						color: theme('colors.gray.900'),
 						textDecoration: 'underline',
