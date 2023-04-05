@@ -163,12 +163,12 @@ module.exports = {
 					transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
 					'&::after': {
 						display: 'inline-block',
-						height: theme('spacing.6'),
-						width: theme('spacing.6'),
+						height: '1.25rem',
+						width: '1.25rem',
 						backgroundRepeat: 'no-repeat',
 						backgroundPosition: 'right',
-						backgroundSize: '1.5rem 1.5rem',
-						marginLeft: '0.5rem',
+						backgroundSize: '1.25rem 1.25rem',
+						marginLeft: '0.25rem',
 						content: '""',
 					},
 					'@media (min-width: 1024px)': {
