@@ -198,19 +198,19 @@ module.exports = {
         },
 
 				'.btn-green': {
-					backgroundColor: theme('colors.green'),
-					color: theme('colors.white'),
-					textDecoration: 'none !important',
+					backgroundColor: theme('colors.green') + ' !important',
+					color: theme('colors.white') + ' !important',
+					textDecoration: 'none !important' + ' !important',
 					'@media (prefers-contrast: more)': {
-						color: theme('colors.green-darkest'),
+						color: theme('colors.green-darkest') + ' !important',
 					},
 					'&:hover': {
-						backgroundColor: theme('colors.green-dark'),
-						color: theme('colors.white'),
+						backgroundColor: theme('colors.green-dark') + ' !important',
+						color: theme('colors.white') + ' !important',
 					},
 					'&:focus': {
-						backgroundColor: theme('colors.green-dark'),
-						color: theme('colors.white'),
+						backgroundColor: theme('colors.green-dark') + ' !important',
+						color: theme('colors.white') + ' !important',
 					},
 					'&::after': {
 						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
