@@ -69,7 +69,8 @@ module.exports = {
 			center: true
 		},
 		fontFamily: {
-			sans: ["Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+			mont: ['Montserrat', "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+			sans: ['Nunito Sans', "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
 			holiday: ['Snowburst One', "cursive"]
 		},
 		fontSize: {
@@ -147,7 +148,7 @@ module.exports = {
       addComponents({
         '.btn': {
 					fontFamily: theme('fontFamily.sans'),
-					fontSize: theme('fontSize.lg'),
+					fontSize: theme('fontSize.xl'),
 					fontWeight: 'bold',
 					padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
 					textTransform: 'uppercase',
@@ -173,7 +174,6 @@ module.exports = {
 					},
 					'@media (min-width: 1024px)': {
 						padding: `${theme('spacing.3')} ${theme('spacing.6')}`,
-						fontSize: theme('fontSize.xl'),
 						'&::after': {
 							marginLeft: 0,
 							width: 0,
