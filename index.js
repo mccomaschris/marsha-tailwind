@@ -220,19 +220,16 @@ module.exports = {
 				'.btn-white': {
 					backgroundColor: theme('colors.white'),
 					color: theme('colors.green'),
-					border: `1px solid ${theme('colors.gray.50')}`,
 					textDecoration: 'none !important',
 					'@media (prefers-contrast: more)': {
 						color: theme('colors.green-darkest'),
 					},
 					'&:hover': {
 						backgroundColor: theme('colors.gray.50'),
-						border: `1px solid ${theme('colors.gray.100')}`,
 						color: theme('colors.green'),
 					},
 					'&:focus': {
 						backgroundColor: theme('colors.gray.50'),
-						border: `1px solid ${theme('colors.gray.100')}`,
 						color: theme('colors.green'),
 					},
 					'&::after': {
