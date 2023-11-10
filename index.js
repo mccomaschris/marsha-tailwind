@@ -289,6 +289,12 @@ module.exports = {
 					}
 				},
 
+				'.btn-link': {
+					'&::after': {
+						backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23131716'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' /%3E%3C/svg%3E")`,
+					}
+				},
+
 				'.right-arrow': {
 					display: 'inline-flex',
 					alignItems: 'center',
